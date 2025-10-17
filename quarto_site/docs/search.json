@@ -1,0 +1,329 @@
+[
+  {
+    "objectID": "tutorials/use-jupyterlab.html",
+    "href": "tutorials/use-jupyterlab.html",
+    "title": "Before the Day - Cluster Access",
+    "section": "",
+    "text": "title: “Use JupyterLab on Gadi”",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#login-to-are",
+    "href": "tutorials/use-jupyterlab.html#login-to-are",
+    "title": "Before the Day - Cluster Access",
+    "section": "Login to ARE",
+    "text": "Login to ARE\nOpen https://are.nci.org.au in a new tab, and log in with your NCI account, NOT email. You will see a dashboard page as shown after login. Each App will be run as an interactive session/job connected to Gadi. In this tutorial we will start a JupyterLab session.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#new-jupyterlab-session",
+    "href": "tutorials/use-jupyterlab.html#new-jupyterlab-session",
+    "title": "Before the Day - Cluster Access",
+    "section": "New JupyterLab Session",
+    "text": "New JupyterLab Session\nClick on the JupyterLab tile from the Dashboard, this will open the setting page for a new Jupyter session. We will fill in circled fields next.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#basic-settings",
+    "href": "tutorials/use-jupyterlab.html#basic-settings",
+    "title": "Before the Day - Cluster Access",
+    "section": "Basic Settings",
+    "text": "Basic Settings\nSetting form has free text input boxes. So we can copy the exact text values below and paste over to the form.\nWalltime (hours) 3\nQueue normal\nCompute Size small\nProject vp91\nStorage gdata/vp91+scratch/vp91\n\nInput boxes can also be used as dropdown selection. If you need to use different NCI projects when working on your project you might find the dropdown function helpful.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#advanced-settings",
+    "href": "tutorials/use-jupyterlab.html#advanced-settings",
+    "title": "Before the Day - Cluster Access",
+    "section": "Advanced Settings",
+    "text": "Advanced Settings\nClick on Show advanced settings at the end of page. This will expand the form with extra fields.  We will fill in selected fields with these values: Some field names are similar, check the field names you are editing are correct.\nModules python3/3.11.0 cuda/12.8.0\nPython or Conda virtual environment base /scratch/data/vp91/Training-Venvs/intro-to-dask\n\n\n\nAdvanced settings section",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#launch-session",
+    "href": "tutorials/use-jupyterlab.html#launch-session",
+    "title": "Before the Day - Cluster Access",
+    "section": "Launch Session",
+    "text": "Launch Session\nMake sure the setting fields and values are filled correctly, and then click on the Launch button at the bottom of the setting page.\nNow you will see the green Session was successfully created message at the top, and Queued status is shown on the right side of the JupyterLab session block as shown below. Wait for the session to start. The wait time depends on the number of cores as well as time requested.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#open-jupyterlab",
+    "href": "tutorials/use-jupyterlab.html#open-jupyterlab",
+    "title": "Before the Day - Cluster Access",
+    "section": "Open JupyterLab",
+    "text": "Open JupyterLab\nOnce the requested resources are allocated, the session will start and the status will change to Running. The Jupyter path should start with the virtual environment base value used in settings, then point to /bin/jupyter.  Confirm the Jupyter path of your session is correct, and click on Open JupyterLab. This will open a new browser tab with JupyterLab interface. \nCongratulations, you are all set for the workshop!",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#unable-to-log-in",
+    "href": "tutorials/use-jupyterlab.html#unable-to-log-in",
+    "title": "Before the Day - Cluster Access",
+    "section": "Unable to Log In",
+    "text": "Unable to Log In\nError:Bad Request: Requested resource does not exist.\nPossible Cause: This error is often caused by issues with browser cookies or cache.\nSolution: Open another tab and log in again, or try using incognito mode.\nError:We are sorry, but something went wrong.\nPossible Cause: Exceeding the /home file system quota on Gadi.\nDiagnosis: You will be able to confirm this by executing the quota -s command on Gadi’s login node. If this is the case, see the usage of Gadi’s HOME using the du -h --max-depth=1 ~ command.\nSolution: Deleting/moving files from your Gadi’s HOME directory to keep the usage below the quota.\nError:Web application could not be started by the Phusion Passenger(R) application server...\nPossible Cause: Exceeding the /home file system quota on Gadi.\nDiagnosis: You will be able to confirm this by executing the quota -s command on Gadi’s login node. If this is the case, see the usage of Gadi’s HOME using the du -h --max-depth=1 ~ command.\nSolution: Deleting/moving files from your Gadi’s HOME directory to keep the usage below the quota.\nError:Web application could not be started by the Phusion Passenger(R) application server...\nPossible Cause: Exceeding the /home file system quota on Gadi.\nDiagnosis: You will be able to confirm this by executing the quota -s command on Gadi’s login node. If this is the case, see the usage of Gadi’s HOME using the du -h --max-depth=1 ~ command.\nSolution: Deleting/moving files from your Gadi’s HOME directory to keep the usage below the quota.\n## Unable to Launch Session Error: qsub: Error: You are not a member of project vp91. You must be a member of a project to submit a job under that project.\nPossible Cause: You are not a member of the project used, or if you recently joined the project and system is syncing account status.\nSolution: Wait for 20 minutes and try again.\nError: Failed to submit session with the following error: usage: qsub [-a date_time]… If this job failed to submit because of an invalid job name please ask your administrator to configure OnDemand to set the environment variable OOD_JOB_NAME_ILLEGAL_CHARS.\nPossible Cause: Special characters are submitted into the setting form.\nSolution: Check the setting page values or manually type the values into the form.\nError:Disk quota exceeded @ dir_s_mkdir - /home/&lt;institution_code&gt;/&lt;username&gt;/ondemand/data/sys/dashboard/batch_connect/sys/desktop_vnc/ncigadi/output/&lt;session_ID&gt;\nPossible Cause: Exceeding the /home file system quota on Gadi.\nDiagnosis: You will be able to confirm this by executing the quota -s command on Gadi’s login node. If this is the case, see the usage of Gadi’s HOME using the du -h --max-depth=1 ~ command.\nSolution: Deleting/moving files from your Gadi’s HOME directory to keep the usage below the quota.\nError: unix listener: cannot bind to path /home/&lt;institution_code&gt;/&lt;username&gt;/.ssh/&lt;session_ID&gt;: No such file or directory. Your connection to the remote server has been terminated. Possible Cause: SSH folder is not properly setup in your account. Diagnosis: You will be able to confirm this by executing the ls -lah ~ command on Gadi’s login node. If there is no .ssh in the output or the folder permission is not correct, follow below steps to resolve the issue. Solution: 1. Login to Gadi terminal 2. Execute the following commands:\n2. **mkdir -p ~/.ssh**\n2. **chmod 700 ~/.ssh**",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#check-debug-log-for-other-issues",
+    "href": "tutorials/use-jupyterlab.html#check-debug-log-for-other-issues",
+    "title": "Before the Day - Cluster Access",
+    "section": "Check Debug Log for Other Issues",
+    "text": "Check Debug Log for Other Issues\nIf your issue is not solved above, please follow these instructions to check the session log or report the issue: 1. Go to my interactive sessions by clicking one of the buttons on the page: \n\nOn the Session block, click Debug Log link  ## Report Issue to Helpdesk\nCopy Debug Log link (if job is still running then use the Session id link).\nSend a new email to help@nci.org.au, include:\n\nSubject: “ARE” and short description of issue\nBody:\n\nA more detailed issue description.\nDebug Log/Session id Link: The link you copied.\nOperating System: e.g. Windows 11, MacOSX 13, Debian Linux etc.\nBrowser: e.g. Firefox 102, Chrome 103, Edge 103\nConnection: e.g. Wired network at ANU, Wireless at Home etc.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#interface",
+    "href": "tutorials/use-jupyterlab.html#interface",
+    "title": "Before the Day - Cluster Access",
+    "section": "Interface",
+    "text": "Interface\nThe JupyterLab workspace consists of a main work area containing tabs of documents and activities, a collapsible left sidebar, and a menu bar.\nThe left sidebar contains a file browser, the list of running kernels and terminals, the Dask extension of JupyterLab, Table of Contentions and Extension Manager.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#running-notebook",
+    "href": "tutorials/use-jupyterlab.html#running-notebook",
+    "title": "Before the Day - Cluster Access",
+    "section": "Running Notebook",
+    "text": "Running Notebook\nDouble-click on a notebook (.ipynb) file to open it in the main area. Selected cell is highlighted in blue. Run Selected Cell\nPress: Shift + Enter or Click: the run button on toolbar",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "tutorials/use-jupyterlab.html#server-connection-error",
+    "href": "tutorials/use-jupyterlab.html#server-connection-error",
+    "title": "Before the Day - Cluster Access",
+    "section": "Server Connection Error",
+    "text": "Server Connection Error\nError:\"Server Connection Error. A connection to the Jupyter server could not be established. JupyterLab will continue trying to reconnect. Check your network connection or Jupyter server configuration.\" Possible Cause: Reached requested job Walltime or exceeding requested JOBFS size. Diagnosis: You will be able to confirm this by checking session log file:$HOME/ondemand/data/sys/dashboard/batch_connect/sys/jupyter/ncigadi/output/&lt;session_ID&gt;/output.logon Gadi. Solution: Re-launching the JupyterLab session by either requesting more Walltime or JOBFS (available under the “Advanced options …”), based on the cause of the issue. ## Saving File Error\nError: \"Unexpected error while saving file: … [Errno 13] Permission denied: '…' \" Possible Cause: This error occurs when a file with the same name already exists and might be owned by another user. Diagnosis: Check the file directory on the left panel of JupyterLab page that you are saving the file in your own folder, not other users. Suggestion: Rename the file and try saving it again.",
+    "crumbs": [
+      "Home",
+      "Tutorials",
+      "Before the Day - Cluster Access"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "courses.html",
+    "href": "courses.html",
+    "title": "NCI Training Courses",
+    "section": "",
+    "text": "Course content for NCI training workshops.\n\nProgramming Basics\n- [Version Control with Git](https://swcarpentry.github.io/git-novice/ )\n- [Introduction to Python](https://swcarpentry.github.io/python-novice-gapminder/ )\n- [Introduction to the Unix Shell](https://swcarpentry.github.io/shell-novice/ )\n- [C Programming for Scientific Computing](https://c-programming-for-scientific-computing.readthedocs.io/en/latest/index.html )\n\n\nDeep Learning\n- [Introduction to Neural Networks and PyTorch](https://intro-to-pytorch.readthedocs.io/en/latest/)\n- Deep Learning Model Development in Weather and Climate Studies\n\n\nHigh Performance Computing\n- [Hands-on with Gadi](https://handson-with-gadi.readthedocs.io/en/latest/)\n- [HPC 101 Series](https://hpc101.readthedocs.io/en/latest/)\n\n\nParallel Programming\n- [Introduction to Parallel Programming using Python](https://intro-to-parallel-programming.readthedocs.io/en/latest/)\n- [Parallel Python - Introduction to Dask](https://intro-to-dask.readthedocs.io/en/latest/)\n- [Parallel Python - Introduction to Numba](https://intro-to-numba.readthedocs.io/en/latest/)\n- [Parallel Python - Introduction to CuPy](https://intro-to-cupy.readthedocs.io/en/latest/index.html)\n\n- [GPU Programming - Introduction to CUDA](https://intro-to-cuda.readthedocs.io/en/latest/)\n- [Parallel Programming - Introduction to MPI](https://demo-readdoc-mpi.readthedocs.io/en/latest/)  \n\n\nGenAI/LLM",
+    "crumbs": [
+      "Home",
+      "NCI Training Courses"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "NCI Learning Hub",
+    "section": "",
+    "text": "Workshops, tutorials, and learning resources for Australian researchers.\nTo learn more about Gadi visit https://opus.nci.org.au/x/4gD."
+  },
+  {
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "NCI Tutorials",
+    "section": "",
+    "text": "Tutorials for Gadi users.\nTo learn more about Gadi visit https://opus.nci.org.au/x/4gD.",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#policies",
+    "href": "tutorials.html#policies",
+    "title": "NCI Tutorials",
+    "section": "Policies",
+    "text": "Policies",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#accounts",
+    "href": "tutorials.html#accounts",
+    "title": "NCI Tutorials",
+    "section": "Accounts",
+    "text": "Accounts",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#access-to-gadi",
+    "href": "tutorials.html#access-to-gadi",
+    "title": "NCI Tutorials",
+    "section": "Access to Gadi",
+    "text": "Access to Gadi\n\nLinux tutorials\n\n\nHow to use man pages",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#file-transfer",
+    "href": "tutorials.html#file-transfer",
+    "title": "NCI Tutorials",
+    "section": "File Transfer",
+    "text": "File Transfer",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#hpc-system-gadi-nodes-and-cores",
+    "href": "tutorials.html#hpc-system-gadi-nodes-and-cores",
+    "title": "NCI Tutorials",
+    "section": "HPC System: Gadi (nodes and cores)",
+    "text": "HPC System: Gadi (nodes and cores)\n\nCheck your project allocation",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#user-support",
+    "href": "tutorials.html#user-support",
+    "title": "NCI Tutorials",
+    "section": "User Support",
+    "text": "User Support",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#check-your-job-status",
+    "href": "tutorials.html#check-your-job-status",
+    "title": "NCI Tutorials",
+    "section": "Check your job status",
+    "text": "Check your job status",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#cancel-a-job",
+    "href": "tutorials.html#cancel-a-job",
+    "title": "NCI Tutorials",
+    "section": "Cancel a job",
+    "text": "Cancel a job",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#monitor-your-job",
+    "href": "tutorials.html#monitor-your-job",
+    "title": "NCI Tutorials",
+    "section": "Monitor your job",
+    "text": "Monitor your job",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#job-output-and-error-files",
+    "href": "tutorials.html#job-output-and-error-files",
+    "title": "NCI Tutorials",
+    "section": "Job output and error files",
+    "text": "Job output and error files",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#check-what-software-is-available",
+    "href": "tutorials.html#check-what-software-is-available",
+    "title": "NCI Tutorials",
+    "section": "Check what software is available",
+    "text": "Check what software is available\n\nLicensed software",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#how-to-use-modules",
+    "href": "tutorials.html#how-to-use-modules",
+    "title": "NCI Tutorials",
+    "section": "How to use modules",
+    "text": "How to use modules\n\nCustomed modules",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  },
+  {
+    "objectID": "tutorials.html#use-python-on-gadi",
+    "href": "tutorials.html#use-python-on-gadi",
+    "title": "NCI Tutorials",
+    "section": "Use Python on Gadi",
+    "text": "Use Python on Gadi\n\nLoad Python module (example in terminal and script)\n\n\nManage Python Packages using virtual environment\n\n\nUse JupyterLab\nUse JupyterLab on Gadi",
+    "crumbs": [
+      "Home",
+      "NCI Tutorials"
+    ]
+  }
+]
