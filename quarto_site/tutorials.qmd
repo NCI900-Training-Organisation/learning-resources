@@ -1,0 +1,38 @@
+---
+title: "NCI Tutorials"
+---
+
+Tutorials for Gadi users.
+
+To learn more about Gadi visit <https://opus.nci.org.au/x/4gD>.
+
+# Getting Started
+## Policies
+## Accounts
+## Access to Gadi
+### Linux tutorials
+### How to use man pages
+## File Transfer
+## HPC System: Gadi (nodes and cores)
+### Check your project allocation
+## User Support
+
+# Data and Storage
+
+# Jobs and Queues
+## Check your job status
+## Cancel a job
+## Monitor your job
+## Job output and error files
+
+# Software and Modules
+## Check what software is available
+### Licensed software
+## How to use modules
+### Customed modules
+## Use Python on Gadi
+### Load Python module (example in terminal and script)
+### Manage Python Packages using virtual environment
+### Use JupyterLab
+[Use JupyterLab on Gadi](tutorials/use-jupyterlab.qmd)
+
