@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: docs
   #render: 
   #  - index.qmd
   #  - courses.qmd
@@ -8,7 +7,7 @@ project:
 
 
 website:
-  title: "NCI Learning Hub"
+  title: "Learning Hub"
   repo-url: https://github.com/NCI900-Training-Organisation/learning-resources.git
   repo-actions: [edit, source, issue]
   reader-mode: true
@@ -25,7 +24,6 @@ website:
         text: Tutorials
       - text: "More"
         menu:
-          - talks.qmd
           - about.qmd 
     tools:
       - icon: github
