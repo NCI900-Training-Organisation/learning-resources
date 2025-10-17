@@ -1,7 +1,0 @@
----
-title: "NCI Learning Hub"
----
-
-Workshops, tutorials, and learning resources for Australian researchers.
-
-To learn more about Gadi visit <https://opus.nci.org.au/x/4gD>.

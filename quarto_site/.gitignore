@@ -1,8 +1,0 @@
-.*
-!.gitignore
-!.gitattributes
-!.github/
-!.nojekyll
-**/*.quarto_ipynb
-_site/
-/.quarto/
