@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/tutorials/use-jupyterlab.html</loc>
-    <lastmod>2025-10-17T02:19:52.289Z</lastmod>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/tutorials/logingadi.html</loc>
+    <lastmod>2025-10-17T04:29:08.452Z</lastmod>
   </url>
   <url>
-    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/dlweather/2_replicate_training.html</loc>
-    <lastmod>2025-10-17T02:07:21.975Z</lastmod>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/tutorials/filetransfer.html</loc>
+    <lastmod>2025-10-17T04:49:29.409Z</lastmod>
   </url>
   <url>
-    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/dlweather/3_modified_training.html</loc>
-    <lastmod>2025-10-17T02:07:47.487Z</lastmod>
-  </url>
-  <url>
-    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/about.html</loc>
-    <lastmod>2025-10-16T04:43:16.079Z</lastmod>
-  </url>
-  <url>
-    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/courses.html</loc>
-    <lastmod>2025-10-17T02:10:47.224Z</lastmod>
-  </url>
-  <url>
-    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/index.html</loc>
-    <lastmod>2025-10-16T23:54:11.514Z</lastmod>
-  </url>
-  <url>
-    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/dlweather/1_data_inspection.html</loc>
-    <lastmod>2025-10-17T02:07:01.414Z</lastmod>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/tutorials.html</loc>
+    <lastmod>2025-10-17T04:51:40.052Z</lastmod>
   </url>
   <url>
     <loc>https://NCI900-Training-Organisation.github.io/learning-resources/dlweather/4_inference_10y_rollout.html</loc>
     <lastmod>2025-10-17T02:08:18.335Z</lastmod>
   </url>
   <url>
-    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/tutorials.html</loc>
-    <lastmod>2025-10-17T02:19:23.380Z</lastmod>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/dlweather/1_data_inspection.html</loc>
+    <lastmod>2025-10-17T02:07:01.414Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/index.html</loc>
+    <lastmod>2025-10-16T23:54:11.514Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/courses.html</loc>
+    <lastmod>2025-10-17T02:10:47.224Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/about.html</loc>
+    <lastmod>2025-10-16T04:43:16.079Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/dlweather/3_modified_training.html</loc>
+    <lastmod>2025-10-17T02:07:47.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/dlweather/2_replicate_training.html</loc>
+    <lastmod>2025-10-17T02:07:21.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/tutorials/use-jupyterlab.html</loc>
+    <lastmod>2025-10-17T02:19:52.289Z</lastmod>
+  </url>
+  <url>
+    <loc>https://NCI900-Training-Organisation.github.io/learning-resources/tutorials/accounts.html</loc>
+    <lastmod>2025-10-17T04:13:24.600Z</lastmod>
   </url>
 </urlset>
