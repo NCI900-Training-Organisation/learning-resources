@@ -304,7 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="run-the-tested-notebook" class="level2">
 <h2 class="anchored" data-anchor-id="run-the-tested-notebook">Run the tested notebook</h2>
 <ol type="1">
-<li>Go to <a href="are.nci.org.au">ARE site</a><br>
+<li>Go to <a href="are.nci.org.au">ARE site</a>, follow instructions on <em><a href="../Getting-Started/use-jupyterlab.html">Run Jupyter Notebooks on Gadi</a></em> page<br>
 </li>
 <li>Fill out the JupyterLab request form:<br>
 </li>
@@ -470,8 +470,8 @@ orography: mean=367.17120361328125, std=809.2915649414062</code></pre>
 </section>
 <section id="variable-fields" class="level2">
 <h2 class="anchored" data-anchor-id="variable-fields">Variable Fields</h2>
-<div id="387e64fd-cadb-4e01-8e08-fcb3e5fc6c1b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-03T07:14:02.562962Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-03T07:14:02.562306Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-03T07:14:10.138787Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-03T07:14:10.137994Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-03T07:14:02.562903Z&quot;}}" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>wdir <span class="op">=</span> <span class="st">"/g/data/z00/yxs900/neuraloperators/sfno/curriculum_learning/lowRes/experiments/03_LUCIE/LUCIE_fix"</span></span>
+<div id="387e64fd-cadb-4e01-8e08-fcb3e5fc6c1b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-03T07:14:02.562962Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-03T07:14:02.562306Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-03T07:14:10.138787Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-03T07:14:10.137994Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-03T07:14:02.562903Z&quot;}}">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>wdir <span class="op">=</span> <span class="st">"&lt;replace with the working directory&gt;"</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>raw_data <span class="op">=</span> np.load(<span class="ss">f"</span><span class="sc">{</span>nb_dir<span class="sc">}</span><span class="ss">/datasets/era5_T30_regridded.npz"</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.load(<span class="ss">f"</span><span class="sc">{</span>nb_dir<span class="sc">}</span><span class="ss">/datasets/era5_T30_preprocessed.npz"</span>)</span>
@@ -595,10 +595,10 @@ orography: mean=367.17120361328125, std=809.2915649414062</code></pre>
 </div>
 </div>
 </div>
-<div id="ef799705-fb5b-4fdb-a377-d37ff193337b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-03T07:14:45.137138Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-03T07:14:45.136955Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-03T07:15:19.320327Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-03T07:15:19.319509Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-03T07:14:45.137121Z&quot;}}" data-execution_count="18">
+<div id="ef799705-fb5b-4fdb-a377-d37ff193337b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-03T07:14:45.137138Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-03T07:14:45.136955Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-03T07:15:19.320327Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-03T07:15:19.319509Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-03T07:14:45.137121Z&quot;}}">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the distribution of all variable fileds</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>wdir <span class="op">=</span> <span class="st">"/g/data/z00/yxs900/neuraloperators/sfno/curriculum_learning/lowRes/experiments/03_LUCIE/LUCIE_fix"</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>wdir <span class="op">=</span> <span class="st">"&lt;replace with the working directory&gt;"</span></span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>raw_data <span class="op">=</span> np.load(<span class="ss">f"</span><span class="sc">{</span>wdir<span class="sc">}</span><span class="ss">/era5_T30_regridded.npz"</span>)</span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.load(<span class="ss">f"</span><span class="sc">{</span>wdir<span class="sc">}</span><span class="ss">/era5_T30_preprocessed.npz"</span>)</span>

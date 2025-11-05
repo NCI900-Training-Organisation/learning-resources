@@ -316,7 +316,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="run-the-tested-notebook" class="level2">
 <h2 class="anchored" data-anchor-id="run-the-tested-notebook">Run the tested notebook</h2>
 <ol type="1">
-<li>Go to <a href="are.nci.org.au">ARE site</a><br>
+<li>Go to <a href="are.nci.org.au">ARE site</a>, follow instructions on <em><a href="../Getting-Started/use-jupyterlab.html">Run Jupyter Notebooks on Gadi</a></em> page<br>
 </li>
 <li>Fill out the JupyterLab request form:<br>
 </li>
@@ -1589,7 +1589,7 @@ GPU name: Tesla V100-PCIE-32GB</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set up dataset</span></span>
 <span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>train_dataset <span class="op">=</span> WeatherDatasetAssimilation(</span>
 <span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>            device<span class="op">=</span>device,</span>
-<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>            dpath<span class="op">=</span><span class="st">"/g/data/z00/yxs900/aardvark/datasets/"</span>,</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>            dpath<span class="op">=</span><span class="st">"&lt;replace with the path to the training data&gt;"</span>,</span>
 <span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>            hadisd_mode<span class="op">=</span><span class="st">"train"</span>,</span>
 <span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>            start_date<span class="op">=</span><span class="st">"2007-01-02"</span>,</span>
 <span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>            end_date<span class="op">=</span><span class="st">"2007-12-31"</span>,</span>
