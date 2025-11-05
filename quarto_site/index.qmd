@@ -1,6 +1,3 @@
----
-title: "NCI Learning Hub"
----
 
 Workshops, tutorials, and learning resources for Australian researchers.
 
