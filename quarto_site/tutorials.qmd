@@ -1,5 +1,5 @@
 ---
-title: "NCI Tutorials"
+title: "Tutorials"
 ---
 
 Tutorials for Gadi users.
@@ -9,7 +9,7 @@ To learn more about Gadi visit <https://opus.nci.org.au/x/4gD>.
 # Getting Started
 ## Policies
 ## Accounts
-## Access to Gadi
+## Login to Gadi
 ### Linux tutorials
 ### How to use man pages
 ## File Transfer
@@ -33,6 +33,5 @@ To learn more about Gadi visit <https://opus.nci.org.au/x/4gD>.
 ## Use Python on Gadi
 ### Load Python module (example in terminal and script)
 ### Manage Python Packages using virtual environment
-### Use JupyterLab
-[Use JupyterLab on Gadi](tutorials/use-jupyterlab.qmd)
+### [Use JupyterLab](tutorials/use-jupyterlab.qmd)
 
