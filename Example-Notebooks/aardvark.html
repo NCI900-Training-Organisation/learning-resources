@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Climate Weather AI/ML Model - Aardvark Weather – Training Resources</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b7552c6a5f77d2b4ee8e8355a1491179.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/NCI logo White small.png" alt="" class="navbar-logo light-content">
+    <img src="../img/NCI logo White small.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Training Resources</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+    <a href="https://github.com/orgs/NCI900-Training-Organisation/repositories" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Example-Notebooks/aardvark.html">Example Notebooks</a></li><li class="breadcrumb-item"><a href="../Example-Notebooks/aardvark.html">Climate Weather AI/ML Model - Aardvark Weather</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../courses.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Self-paced Courses</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Example Notebooks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Example-Notebooks/aardvark.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Climate Weather AI/ML Model - Aardvark Weather</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Example-Notebooks/lucie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Climate Weather AI/ML Model - Lucie</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Getting Started</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Getting-Started/accounts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Accounts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Getting-Started/filetransfer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">File Transfer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Getting-Started/logingadi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Login to Gadi</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Getting-Started/use-jupyterlab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run Jupyter Notebooks on Gadi</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cluster-access" id="toc-cluster-access" class="nav-link active" data-scroll-target="#cluster-access">Cluster Access</a></li>
+  <li><a href="#run-the-tested-notebook" id="toc-run-the-tested-notebook" class="nav-link" data-scroll-target="#run-the-tested-notebook">Run the tested notebook</a></li>
+  <li><a href="#note-on-the-tested-notebook" id="toc-note-on-the-tested-notebook" class="nav-link" data-scroll-target="#note-on-the-tested-notebook">Note on the tested notebook</a></li>
+  <li><a href="#aardvark-weather" id="toc-aardvark-weather" class="nav-link" data-scroll-target="#aardvark-weather">Aardvark Weather</a></li>
+  <li><a href="#dataset-demo" id="toc-dataset-demo" class="nav-link" data-scroll-target="#dataset-demo">Dataset Demo</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#satellite" id="toc-satellite" class="nav-link" data-scroll-target="#satellite">Satellite</a>
+  <ul class="collapse">
+  <li><a href="#hirs" id="toc-hirs" class="nav-link" data-scroll-target="#hirs">HIRS</a></li>
+  <li><a href="#amsu-a" id="toc-amsu-a" class="nav-link" data-scroll-target="#amsu-a">AMSU-A</a></li>
+  <li><a href="#amsu-b" id="toc-amsu-b" class="nav-link" data-scroll-target="#amsu-b">AMSU-B</a></li>
+  <li><a href="#iasi" id="toc-iasi" class="nav-link" data-scroll-target="#iasi">IASI</a></li>
+  <li><a href="#ascat" id="toc-ascat" class="nav-link" data-scroll-target="#ascat">ASCAT</a></li>
+  </ul></li>
+  <li><a href="#gridsat" id="toc-gridsat" class="nav-link" data-scroll-target="#gridsat">GRIDSAT</a></li>
+  <li><a href="#synops" id="toc-synops" class="nav-link" data-scroll-target="#synops">SYNOPS</a>
+  <ul class="collapse">
+  <li><a href="#hadisd" id="toc-hadisd" class="nav-link" data-scroll-target="#hadisd">HadISD</a></li>
+  <li><a href="#icoads" id="toc-icoads" class="nav-link" data-scroll-target="#icoads">ICOADS</a></li>
+  <li><a href="#igra" id="toc-igra" class="nav-link" data-scroll-target="#igra">IGRA</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#forecast-demo" id="toc-forecast-demo" class="nav-link" data-scroll-target="#forecast-demo">Forecast demo</a>
+  <ul class="collapse">
+  <li><a href="#generate-predictions" id="toc-generate-predictions" class="nav-link" data-scroll-target="#generate-predictions">Generate predictions</a></li>
+  <li><a href="#visualise-model-predictions" id="toc-visualise-model-predictions" class="nav-link" data-scroll-target="#visualise-model-predictions">Visualise model predictions</a></li>
+  </ul></li>
+  <li><a href="#end-to-end-optimised-forecast-demo" id="toc-end-to-end-optimised-forecast-demo" class="nav-link" data-scroll-target="#end-to-end-optimised-forecast-demo">End to end optimised forecast demo</a>
+  <ul class="collapse">
+  <li><a href="#generate-predictions-1" id="toc-generate-predictions-1" class="nav-link" data-scroll-target="#generate-predictions-1">Generate predictions</a></li>
+  <li><a href="#visualise-model-predictions-1" id="toc-visualise-model-predictions-1" class="nav-link" data-scroll-target="#visualise-model-predictions-1">Visualise model predictions</a></li>
+  </ul></li>
+  <li><a href="#train-the-data-assimilation-block" id="toc-train-the-data-assimilation-block" class="nav-link" data-scroll-target="#train-the-data-assimilation-block">Train the Data Assimilation Block</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.dev/NCI900-Training-Organisation/learning-resources.git/blob/main/Example-Notebooks/aardvark.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/blob/main/Example-Notebooks/aardvark.ipynb" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Example-Notebooks/aardvark.html">Example Notebooks</a></li><li class="breadcrumb-item"><a href="../Example-Notebooks/aardvark.html">Climate Weather AI/ML Model - Aardvark Weather</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Climate Weather AI/ML Model - Aardvark Weather</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="cluster-access" class="level2">
+<h2 class="anchored" data-anchor-id="cluster-access">Cluster Access</h2>
+<ol type="1">
+<li><a href="https://my.nci.org.au/mancini">Create an NCI account&nbsp;</a>using <strong>institution email</strong></li>
+<li>Join below NCI projects
+<ul>
+<li><a href="https://aus01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmy.nci.org.au%2Fmancini%2Fproject%2Fvp91&amp;data=05%7C02%7CZhuochen.Wu%40anu.edu.au%7Cf5a89cc20ce54084a5a408dda23d8170%7Ce37d725cab5c46249ae5f0533e486437%7C0%7C0%7C638845107242745767%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&amp;sdata=U5QIrogOxO%2FbxR8Y7FGaB8tA1hzCGOzqP4QiFiqv5XU%3D&amp;reserved=0">vp91:NCI Training Project</a></li>
+<li><a href="https://my.nci.org.au/mancini/project/dk92/join">dk92: for environment modules and some examples</a></li>
+<li><a href="https://my.nci.org.au/mancini/project/wb00/join">wb00: for NCI-WeatherBench and ClimateNet datasets</a></li>
+<li><a href="https://my.nci.org.au/mancini/project/rt52/join">rt52: for ERA5 datasets</a></li>
+<li><a href="https://my.nci.org.au/mancini/project/ob53/join">ob53: for BARRA2 datasets</a></li>
+</ul></li>
+</ol>
+</section>
+<section id="run-the-tested-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="run-the-tested-notebook">Run the tested notebook</h2>
+<ol type="1">
+<li>Go to <a href="are.nci.org.au">ARE site</a><br>
+</li>
+<li>Fill out the JupyterLab request form:<br>
+</li>
+</ol>
+<ul>
+<li><strong>Walltime (hours)</strong>: <code>1</code></li>
+<li><strong>Queue</strong>: <code>gpuvolta</code></li>
+<li><strong>Compute Size</strong>: <code>1gpu</code></li>
+<li><strong>Project</strong>: <code>&lt;xy01&gt;</code></li>
+<li><strong>Storage</strong>: <code>gdata/dk92+scratch/&lt;xy01&gt;</code></li>
+</ul>
+<ol start="3" type="1">
+<li>Click <strong><em>Advanced options</em></strong> and fill in the following fields:<br>
+</li>
+</ol>
+<ul>
+<li><strong>Module directories</strong>: <code>/g/data/dk92/apps/Modules/modulefiles/</code><br>
+</li>
+<li><strong>Modules</strong>: <code>NCI-ai-ml/25.07</code><br>
+</li>
+<li><strong>Jobfs size</strong>: <code>10GB</code><br>
+</li>
+</ul>
+<ol start="4" type="1">
+<li>Launch the session to run the tested notebook</li>
+</ol>
+</section>
+<section id="note-on-the-tested-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="note-on-the-tested-notebook">Note on the tested notebook</h2>
+<p>copy the tested notebook from any/all of the following path to your own working directory. If your working directory is different from “/scratch/<xy01>”, remember to change the storage directive in the JupyterLab request form.</xy01></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/g/data/dk92/notebooks/examples-aiml/aardvark-weather/data_demo.ipynb</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/g/data/dk92/notebooks/examples-aiml/aardvark-weather/forecast_demo.ipynb</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/g/data/dk92/notebooks/examples-aiml/aardvark-weather/e2e_finetune_demo.ipynb</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">/g/data/dk92/notebooks/examples-aiml/aardvark-weather/train_encoder.ipynb</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>all the notebooks are using the original datasets released with the Aardvark-Weather paper[1] in its huggingface record[3].</li>
+<li>To run inference only, the dataset is downloaded to <code>/g/data/dk92/data/aardvark-weather/sample_data</code>.</li>
+<li>To train the encoder, user has to do the data transformation from the training dataset <code>/g/data/dk92/data/aardvark-weather/training_data</code> since the default data loader doesn’t read directly from the netcdf files in the training datasets. The transformed data requires approximately 200GiB disk space. If you need help to do the data transformation, please get in touch through NCI help desk.</li>
+<li>the original four checkpoints, for the encoder, processor, decoder and the end-to-end model, were downloaded from the huggingface record[3] and hosted in <code>g/data/dk92/data/aardvark-weather/trained_model</code>.</li>
+</ul>
+</section>
+<section id="aardvark-weather" class="level2">
+<h2 class="anchored" data-anchor-id="aardvark-weather">Aardvark Weather</h2>
+<p>Aardvark Weather is an end-to-end data-driven model for weather prediction. Unlike most of its data-driven forecasting model peers, it directly maps past observations to future forecasts. The architecture consists of three components: an encoder, a processor, and a decoder. The encoder ingests raw observations to estimate the gridded initial state of the atmosphere. The processor then advances the estimated atmospheric state in time. Finally, the decoder generates the prediction at the point of interest based on the gridded state forecast. Each component was initially trained independently. The encoder was trained on level 1B or 1C satellite data (ASCAT, AMSU-A &amp; B, HIRS, IASI, GRIDSAT) and in-situ records (HadISD, ICOADS, IGRA). The processor was trained on 1.5° regridded ERA5 dataset utilising surface variables (t2m, u10, v10, mslp) and pressure level variables (q, z, t, u, v) at level 200, 500, 700, and 850 hPa. The decoder was trained on HadISD station data using near-surface temperature (t2m) and wind speed (ws). Once these blocks were individually trained, they were chained in sequence and fine-tuning into the end-to-end model.</p>
+<p>In the paper [1] , the authors systematically benchmark Aardvark Weather and demonstrate its potential to replace the full numerical weather prediction (NWP) pipeline.</p>
+<p>For global gridded forecasts, Aardvark achieves latitude-weighed RMSE comparable to the Integrated Forecasting System (IFS) in its high resolution configuration (HRES) from the European Centre for Medium-Range Weather Forecasts (ECMWF) and Global Forecast System (GFS) from the National Centers for Environmental Prediction, across variables including t2m, u10, v10, mslp, t850, u700, and q700 at lead time up to 10 days. Spatially, the model successfully reproduces the large-scale atmospheric state features in both the mid-latitude and the tropics.</p>
+<p>For station forecasting, Aardvark delivers global mean absolute error (MAE) on par with the station-corrected HRES for temperatures predictions up to 10 days and for wind speed up to 6 days. Notably, in resource-limited areas such as West Africa and the Pacific, Aardvark consistently out-performed the station-corrected IFS-HRES across all lead times.</p>
+<p>At NCI, we configured the NCI-ai-ml environment compatible to support Aardvark Weather [2], enabling researchers to explore its datasets, and building its training and inference pipelines on Gadi. To assist users, four Jupyter notebooks have been developed, showcasing the satellite and synoptic observation datasets[3], model training workflow, and forecast evaluation procedures.</p>
+<p>Reference:<br>
+1. Allen, A., Markou, S., Tebbutt, W. et al.&nbsp;(2025). End-to-end data-driven weather prediction. Nature, 641, 1172–1179. https://doi.org/10.1038/s41586-025-08897-0</p>
+<ol start="2" type="1">
+<li><p>Allen, A. (2025). aardvark-weather-public [Software]. GitHub. https://github.com/anna-allen/aardvark-weather-public</p></li>
+<li><p>Aardvark Weather Observational Dataset, av555/aardvark-weather, Hugging Face, doi:10.57967/hf/4274, https://huggingface.co/datasets/av555/aardvark-weather”</p></li>
+</ol>
+</section>
+<section id="dataset-demo" class="level1">
+<h1>Dataset Demo</h1>
+<p><strong>Notes from NCI</strong>: This notebook is originally from <a href="https://github.com/anna-allen/aardvark-weather-public/blob/main/notebooks/data_demo.ipynb">aardvark-weather-public</a> repository. We adapt it to facilitate NCI users to run it on Gadi. The visualization of GRIDSAT is added for the completeness. It uses the netcdf file from the training datasets provided by the author in the <a href="https://huggingface.co/datasets/av555/aardvark-weather/tree/main/training_data">huggingface instance av555/aardvark-weather</a>.</p>
+<p>This notebook provides an example of the data utilised to generate a forecast using Aardvark Weather. We explore a single timeslice containing all the observations required to generate a forecast. This sample data is the output of the loader <code>WeatherDatasetE2E</code> in <code>../aardvark/loaders.py</code>.</p>
+<div id="443f92c8-4d59-4a4d-8b21-111663afd8ac" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:11.905744Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:11.905189Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:12.184829Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:12.183044Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:11.905686Z&quot;}}" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>module <span class="bu">list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Currently Loaded Modulefiles:
+ 1) openmpi/4.1.5   2) singularity   3) NCI-ai-ml/25.07   4) pbs  </code></pre>
+</div>
+</div>
+<div id="c17595b2-a624-440b-a2be-6af8d3802f87" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:12.188238Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:12.187639Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:12.538308Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:12.537477Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:12.188179Z&quot;}}" data-tags="[]" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="bc8b869d-33d4-45e5-b3ef-15d4e521e3d5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:12.539156Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:12.538908Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:12.881777Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:12.880676Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:12.539137Z&quot;}}" data-tags="[]" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>matplotlib.rcParams[<span class="st">'mathtext.fontset'</span>] <span class="op">=</span> <span class="st">'stix'</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>matplotlib.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">'STIXGeneral'</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>ddir <span class="op">=</span> <span class="st">"/g/data/dk92/data/aardvark-weather"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>Open a sample of data required to produce a forecast.</p>
+<div id="0483c01d-2e08-469c-b914-42532cc3099b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:12.882732Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:12.882457Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:14.486650Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:14.485068Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:12.882712Z&quot;}}" data-tags="[]" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/sample_data_final.pkl"</span>, <span class="st">'rb'</span>) <span class="im">as</span> fp:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> pickle.load(fp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="c10e7b17-0eac-449c-b90d-51b24c707fd2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:14.489946Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:14.489216Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:14.501430Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:14.500316Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:14.489903Z&quot;}}" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>[ ki <span class="cf">for</span> ki <span class="kw">in</span> data[<span class="st">"assimilation"</span>].keys() <span class="cf">if</span> <span class="st">"_x_current"</span> <span class="kw">in</span> ki]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>['sat_x_current',
+ 'icoads_x_current',
+ 'igra_x_current',
+ 'amsua_x_current',
+ 'amsub_x_current',
+ 'iasi_x_current',
+ 'ascat_x_current',
+ 'hirs_x_current',
+ 'era5_x_current']</code></pre>
+</div>
+</div>
+<p>Multiple different datasets are utilised as input to create a forecast, each with multiple channels including observations and metadata. Example channels for each of these are plotted below. The plot_channel variable in each cell can be adjusted to visualise different channels.</p>
+</section>
+<section id="satellite" class="level2">
+<h2 class="anchored" data-anchor-id="satellite">Satellite</h2>
+<p>First visualise the satellite data from HIRS, AMSU-A, AMSU-B, IASI and ASCAT</p>
+<div id="693aa212-c3ab-4eda-b07a-a6b262da627d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:14.502442Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:14.502167Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:14.531515Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:14.530277Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:14.502414Z&quot;}}" data-tags="[]" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up longitude and latitude for plotting</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>lon <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">359</span>,<span class="dv">360</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>lat <span class="op">=</span> np.linspace(<span class="dv">90</span>,<span class="op">-</span><span class="dv">90</span>,<span class="dv">181</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>lon_1p5 <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">359</span>,<span class="dv">240</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>lat_1p5 <span class="op">=</span> np.linspace(<span class="dv">90</span>,<span class="op">-</span><span class="dv">90</span>,<span class="dv">121</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="hirs" class="level3">
+<h3 class="anchored" data-anchor-id="hirs">HIRS</h3>
+<div id="0d750dcc-cfef-4ca5-8f14-a7bae45980f4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:14.532945Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:14.532586Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:15.058725Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:15.057674Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:14.532908Z&quot;}}" data-tags="[]" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">11</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.contourf(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    lon,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    lat,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"hirs_current"</span>][<span class="dv">0</span>,...,plot_channel].cpu().T, </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised radiance'</span>) </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"HIRS channel </span><span class="sc">{</span>plot_channel<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="amsu-a" class="level3">
+<h3 class="anchored" data-anchor-id="amsu-a">AMSU-A</h3>
+<div id="79deb284-7ed8-47d2-9006-a13a06d2b835" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:15.059485Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:15.059314Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:15.374650Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:15.373828Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:15.059468Z&quot;}}" data-tags="[]" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.contourf(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    lon, </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    lat[:<span class="op">-</span><span class="dv">1</span>],</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"amsua_current"</span>][<span class="dv">0</span>,...,plot_channel].cpu(), </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised radiance'</span>) </span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"AMSU-A channel </span><span class="sc">{</span>plot_channel<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="amsu-b" class="level3">
+<h3 class="anchored" data-anchor-id="amsu-b">AMSU-B</h3>
+<div id="466434e7-7296-4454-b14c-6ab40bfbe0d1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:15.375533Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:15.375350Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:15.825499Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:15.824665Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:15.375516Z&quot;}}" data-tags="[]" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.contourf(</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    lon,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    lat,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"amsub_current"</span>][<span class="dv">0</span>,...,plot_channel].T.cpu(), </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised radiance'</span>) </span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"AMSU-A channel </span><span class="sc">{</span>plot_channel<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="iasi" class="level3">
+<h3 class="anchored" data-anchor-id="iasi">IASI</h3>
+<div id="d5a5caf9-ecc4-403d-97ff-6c96dbc18f13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:15.826339Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:15.826158Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:16.315330Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:16.314494Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:15.826322Z&quot;}}" data-tags="[]" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.contourf(</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    lon,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    lat,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"iasi_current"</span>][<span class="dv">0</span>,...,plot_channel].T.cpu(), </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised radiance'</span>) </span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"IASI channel </span><span class="sc">{</span>plot_channel<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="ascat" class="level3">
+<h3 class="anchored" data-anchor-id="ascat">ASCAT</h3>
+<div id="c4e78faa-a9bd-402d-a5e5-33e731aef782" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:16.316229Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:16.316045Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:16.647872Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:16.647062Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:16.316212Z&quot;}}" data-tags="[]" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"There are </span><span class="sc">{</span>data[<span class="st">'assimilation'</span>][<span class="st">'ascat_current'</span>]<span class="sc">.</span>shape[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss"> channels in this dataset.</span><span class="ch">\n</span><span class="ss">Plotting channel 5.</span><span class="ch">\n</span><span class="ss">Modify plot_channel to any integer between 0 and 16 to inspect other channels."</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.contourf(</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    lon,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    lat,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"ascat_current"</span>][<span class="dv">0</span>,...,plot_channel].T.cpu(), </span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised radiance'</span>) </span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"ASCAT channel </span><span class="sc">{</span>plot_channel<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>There are 17 channels in this dataset.
+Plotting channel 5.
+Modify plot_channel to any integer between 0 and 16 to inspect other channels.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-12-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="gridsat" class="level2">
+<h2 class="anchored" data-anchor-id="gridsat">GRIDSAT</h2>
+<p><strong>NOTE from NCI</strong>: Two channels of GRIDSAT dataset are also used in training of Aardvark Weather.</p>
+<div id="1cc5071d-babb-4856-b5be-8932bf997ff4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:16.648668Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:16.648490Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:17.307528Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:17.306809Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:16.648651Z&quot;}}" data-tags="[]" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>nc_file <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/training_data/gridsat_data_v1.nc"</span>  </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>nc <span class="op">=</span> xr.open_dataset(nc_file)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>nc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt; Size: 4GB
+Dimensions:       (time: 4746, latitude: 200, longitude: 514)
+Coordinates:
+  * time          (time) datetime64[ns] 38kB 2007-01-02 ... 2019-12-30
+  * longitude     (longitude) float32 2kB 0.215 0.915 1.615 ... 358.8 359.5
+  * latitude      (latitude) float32 800B -69.68 -68.99 -68.28 ... 68.92 69.61
+Data variables:
+    gridsat_6p7   (time, latitude, longitude) float32 2GB ...
+    gridsat_10p3  (time, latitude, longitude) float32 2GB ...</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input id="section-3ed00a78-70e0-4304-bd08-c43e8e8bd7c3" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-3ed00a78-70e0-4304-bd08-c43e8e8bd7c3" class="xr-section-summary" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 4746</li><li><span class="xr-has-index">latitude</span>: 200</li><li><span class="xr-has-index">longitude</span>: 514</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input id="section-f8409491-6898-44e6-a70e-4e0054bbd590" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-f8409491-6898-44e6-a70e-4e0054bbd590" class="xr-section-summary">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">2007-01-02 ... 2019-12-30</div><input id="attrs-26349a62-0a7b-46c0-8916-0d783e4e0fef" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-26349a62-0a7b-46c0-8916-0d783e4e0fef" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-7f0c7655-8a79-4add-8669-35857bb6a203" class="xr-var-data-in" type="checkbox"><label for="data-7f0c7655-8a79-4add-8669-35857bb6a203" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['2007-01-02T00:00:00.000000000', '2007-01-03T00:00:00.000000000',
+       '2007-01-04T00:00:00.000000000', ..., '2019-12-28T00:00:00.000000000',
+       '2019-12-29T00:00:00.000000000', '2019-12-30T00:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">longitude</span></div><div class="xr-var-dims">(longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">0.215 0.915 1.615 ... 358.8 359.5</div><input id="attrs-f3b86cfd-8a36-4e91-9f66-e199ce49ec74" class="xr-var-attrs-in" type="checkbox"><label for="attrs-f3b86cfd-8a36-4e91-9f66-e199ce49ec74" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-c7e38ae1-2c98-464b-bbec-09ef56bafaca" class="xr-var-data-in" type="checkbox"><label for="data-c7e38ae1-2c98-464b-bbec-09ef56bafaca" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class="xr-var-data"><pre>array([2.149963e-01, 9.150085e-01, 1.614990e+00, ..., 3.581150e+02,
+       3.588150e+02, 3.595150e+02], dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">latitude</span></div><div class="xr-var-dims">(latitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">-69.68 -68.99 ... 68.92 69.61</div><input id="attrs-fbb58a42-75a0-41c2-b861-0f428d9fc778" class="xr-var-attrs-in" type="checkbox"><label for="attrs-fbb58a42-75a0-41c2-b861-0f428d9fc778" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-5ef6c5da-5196-4481-bd6b-48e34a86c55b" class="xr-var-data-in" type="checkbox"><label for="data-5ef6c5da-5196-4481-bd6b-48e34a86c55b" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class="xr-var-data"><pre>array([-69.685   , -68.985   , -68.284996, -67.58501 , -66.884995, -66.185   ,
+       -65.485   , -64.784996, -64.08501 , -63.385002, -62.684998, -61.984997,
+       -61.284996, -60.585003, -59.885002, -59.184998, -58.484997, -57.784996,
+       -57.085003, -56.385002, -55.685005, -54.984997, -54.284996, -53.585   ,
+       -52.885002, -52.185005, -51.484997, -50.785   , -50.085   , -49.385002,
+       -48.685   , -47.984997, -47.285   , -46.585   , -45.885002, -45.185   ,
+       -44.484997, -43.785   , -43.085   , -42.385002, -41.685   , -40.984997,
+       -40.285   , -39.585   , -38.885002, -38.185   , -37.484997, -36.785   ,
+       -36.085   , -35.385002, -34.684998, -33.984997, -33.285   , -32.585   ,
+       -31.885   , -31.185001, -30.484997, -29.785   , -29.084997, -28.385   ,
+       -27.685001, -26.985   , -26.285   , -25.585   , -24.885   , -24.185001,
+       -23.485   , -22.785   , -22.085   , -21.385   , -20.685001, -19.985   ,
+       -19.285   , -18.585   , -17.885   , -17.185001, -16.484999, -15.785001,
+       -15.084999, -14.385   , -13.684999, -12.985001, -12.285   , -11.584999,
+       -10.885   , -10.184999,  -9.485   ,  -8.785   ,  -8.084999,  -7.385   ,
+        -6.685   ,  -5.984999,  -5.285   ,  -4.585001,  -3.884998,  -3.185001,
+        -2.484998,  -1.785   ,  -1.085001,  -0.384998,   0.314999,   1.015002,
+         1.715   ,   2.414999,   3.115002,   3.814999,   4.515002,   5.215   ,
+         5.914999,   6.615002,   7.314999,   8.015001,   8.715   ,   9.414999,
+        10.115002,  10.814999,  11.515001,  12.215   ,  12.914999,  13.615003,
+        14.315   ,  15.015001,  15.714999,  16.414999,  17.115002,  17.814999,
+        18.515001,  19.215   ,  19.914999,  20.615002,  21.314999,  22.015001,
+        22.715   ,  23.414999,  24.115002,  24.814999,  25.515001,  26.215   ,
+        26.914999,  27.615002,  28.314999,  29.015003,  29.715   ,  30.414999,
+        31.115002,  31.814999,  32.515003,  33.215   ,  33.915   ,  34.615   ,
+        35.315   ,  36.015003,  36.715   ,  37.415   ,  38.115   ,  38.815   ,
+        39.515003,  40.215   ,  40.915   ,  41.615   ,  42.315   ,  43.015003,
+        43.715   ,  44.415   ,  45.115   ,  45.815   ,  46.515003,  47.215   ,
+        47.915   ,  48.615   ,  49.315   ,  50.015003,  50.715   ,  51.415   ,
+        52.115   ,  52.814995,  53.515003,  54.215004,  54.915   ,  55.615   ,
+        56.314995,  57.015003,  57.715004,  58.415   ,  59.114998,  59.815002,
+        60.515003,  61.215004,  61.915   ,  62.614998,  63.315002,  64.015   ,
+        64.715004,  65.415   ,  66.115   ,  66.815   ,  67.515   ,  68.215004,
+        68.915   ,  69.615   ], dtype=float32)</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-cb49ece5-fd41-4234-bb8b-cc03abecbddc" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-cb49ece5-fd41-4234-bb8b-cc03abecbddc" class="xr-section-summary">Data variables: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>gridsat_6p7</span></div><div class="xr-var-dims">(time, latitude, longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-d456550b-9500-44c0-9f8a-d3a769950e53" class="xr-var-attrs-in" type="checkbox"><label for="attrs-d456550b-9500-44c0-9f8a-d3a769950e53" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-01c8b398-26e8-4e64-bd5c-328eb9f75c27" class="xr-var-data-in" type="checkbox"><label for="data-01c8b398-26e8-4e64-bd5c-328eb9f75c27" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>units :</span></dt><dd>K</dd></dl></div><div class="xr-var-data"><pre>[487888800 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>gridsat_10p3</span></div><div class="xr-var-dims">(time, latitude, longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-3c1c9263-0847-4486-ac84-e408aa9e85aa" class="xr-var-attrs-in" type="checkbox"><label for="attrs-3c1c9263-0847-4486-ac84-e408aa9e85aa" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-03ce009f-342a-407d-8515-67fb0b87bd59" class="xr-var-data-in" type="checkbox"><label for="data-03ce009f-342a-407d-8515-67fb0b87bd59" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>units :</span></dt><dd>K</dd></dl></div><div class="xr-var-data"><pre>[487888800 values with dtype=float32]</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-e8f19d6b-2068-46ae-ad5b-73335e9aed73" class="xr-section-summary-in" type="checkbox"><label for="section-e8f19d6b-2068-46ae-ad5b-73335e9aed73" class="xr-section-summary">Indexes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><input type="checkbox" disabled=""><label></label><input id="index-0e300020-e8e5-4d69-a5f2-c2c9ba1e7980" class="xr-index-data-in" type="checkbox"><label for="index-0e300020-e8e5-4d69-a5f2-c2c9ba1e7980" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['2007-01-02', '2007-01-03', '2007-01-04', '2007-01-05',
+               '2007-01-06', '2007-01-07', '2007-01-08', '2007-01-09',
+               '2007-01-10', '2007-01-11',
+               ...
+               '2019-12-21', '2019-12-22', '2019-12-23', '2019-12-24',
+               '2019-12-25', '2019-12-26', '2019-12-27', '2019-12-28',
+               '2019-12-29', '2019-12-30'],
+              dtype='datetime64[ns]', name='time', length=4746, freq=None))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>longitude</div></div><div class="xr-index-preview">PandasIndex</div><input type="checkbox" disabled=""><label></label><input id="index-a0b51183-ee30-415d-8dbe-5116823f28af" class="xr-index-data-in" type="checkbox"><label for="index-a0b51183-ee30-415d-8dbe-5116823f28af" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([ 0.214996337890625,  0.915008544921875,     1.614990234375,
+         2.31500244140625,    3.0150146484375,  3.714996337890625,
+        4.415008544921875,     5.114990234375,   5.81500244140625,
+          6.5150146484375,
+       ...
+        353.2149963378906,  353.9150085449219,   354.614990234375,
+       355.31500244140625,  356.0150146484375,  356.7149963378906,
+        357.4150085449219,   358.114990234375, 358.81500244140625,
+        359.5150146484375],
+      dtype='float32', name='longitude', length=514))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>latitude</div></div><div class="xr-index-preview">PandasIndex</div><input type="checkbox" disabled=""><label></label><input id="index-00a77c39-d3a4-499c-a260-85412d9511ab" class="xr-index-data-in" type="checkbox"><label for="index-00a77c39-d3a4-499c-a260-85412d9511ab" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([-69.68499755859375, -68.98500061035156, -68.28499603271484,
+       -67.58500671386719, -66.88499450683594, -66.18499755859375,
+       -65.48500061035156, -64.78499603271484, -64.08500671386719,
+       -63.38500213623047,
+       ...
+        63.31500244140625,  64.01499938964844,  64.71500396728516,
+        65.41500091552734,  66.11499786376953,  66.81500244140625,
+        67.51499938964844,  68.21500396728516,  68.91500091552734,
+        69.61499786376953],
+      dtype='float32', name='latitude', length=200))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-1bece452-39ae-4699-8b99-2731ae54da52" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-1bece452-39ae-4699-8b99-2731ae54da52" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="939ba574-b842-419e-9c10-0b54bf0ef85a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:17.308588Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:17.308282Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:18.300564Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:18.299709Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:17.308569Z&quot;}}" data-tags="[]" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>lat_sat <span class="op">=</span>nc.latitude.values</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>lon_sat <span class="op">=</span>nc.longitude.values</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>data_sat<span class="op">=</span> nc[<span class="st">"gridsat_6p7"</span>].values</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"There are 2 channels in this dataset.</span><span class="ch">\n</span><span class="ss">Plotting channel `gridsat_6p7`.</span><span class="ch">\n</span><span class="ss">Modify the varname used in data_sat to inspect the other channel `gridsat_10p3`."</span>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.contourf(</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    lon_sat,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    lat_sat,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    data_sat[<span class="dv">0</span>,:], </span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised radiance'</span>) </span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"GRIDSAT channel 6p7"</span>)</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>There are 2 channels in this dataset.
+Plotting channel `gridsat_6p7`.
+Modify the varname used in data_sat to inspect the other channel `gridsat_10p3`.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-14-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="synops" class="level2">
+<h2 class="anchored" data-anchor-id="synops">SYNOPS</h2>
+<p>We next visualise the SYNOPS data from land stations, marine platforms and radiosonde profiles</p>
+<section id="hadisd" class="level3">
+<h3 class="anchored" data-anchor-id="hadisd">HadISD</h3>
+<div id="8de57b08-ab88-492d-b344-ebed1b8096b9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:18.302412Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:18.302231Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:18.707119Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:18.706286Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:18.302395Z&quot;}}" data-tags="[]" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.scatter(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"x_context_hadisd_current"</span>][plot_channel][<span class="dv">0</span>,<span class="dv">0</span>,:].cpu(),</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"x_context_hadisd_current"</span>][plot_channel][<span class="dv">0</span>,<span class="dv">1</span>,:].cpu(),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> data[<span class="st">"assimilation"</span>][<span class="st">"y_context_hadisd_current"</span>][plot_channel][<span class="dv">0</span>,:].cpu(), </span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised value'</span>) </span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"HadISD channel </span><span class="sc">{</span>plot_channel<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="icoads" class="level3">
+<h3 class="anchored" data-anchor-id="icoads">ICOADS</h3>
+<div id="12439ced-5e19-43eb-9953-f4e9994a65ad" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:18.707854Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:18.707680Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:19.106562Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:19.105734Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:18.707837Z&quot;}}" data-tags="[]" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.scatter(</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"icoads_x_current"</span>][<span class="dv">0</span>][<span class="dv">0</span>,:].cpu(),</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"icoads_x_current"</span>][<span class="dv">1</span>][<span class="dv">0</span>,:].cpu(),</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> data[<span class="st">"assimilation"</span>][<span class="st">"icoads_current"</span>][<span class="dv">0</span>,plot_channel,:].cpu(), </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised value'</span>) </span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"ICOADS channel </span><span class="sc">{</span>plot_channel<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="igra" class="level3">
+<h3 class="anchored" data-anchor-id="igra">IGRA</h3>
+<div id="4b5373ec-9e6c-4fa5-baf6-88650e537f79" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2025-09-29T00:55:19.107595Z&quot;,&quot;iopub.status.busy&quot;:&quot;2025-09-29T00:55:19.107413Z&quot;,&quot;iopub.status.idle&quot;:&quot;2025-09-29T00:55:19.249912Z&quot;,&quot;shell.execute_reply&quot;:&quot;2025-09-29T00:55:19.249113Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2025-09-29T00:55:19.107578Z&quot;}}" data-tags="[]" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.scatter(</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"igra_x_current"</span>][<span class="dv">0</span>][<span class="dv">0</span>,:].cpu(),</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"assimilation"</span>][<span class="st">"igra_x_current"</span>][<span class="dv">1</span>][<span class="dv">0</span>,:].cpu(),</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> data[<span class="st">"assimilation"</span>][<span class="st">"igra_current"</span>][<span class="dv">0</span>,plot_channel,:].cpu(), </span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"magma"</span>)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Normalised value'</span>) </span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"IGRA channel </span><span class="sc">{</span>plot_channel<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-17-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="forecast-demo" class="level1">
+<h1>Forecast demo</h1>
+<p><strong>Notes from NCI</strong>: This notebook is originally from <a href="https://github.com/anna-allen/aardvark-weather-public/blob/main/notebooks/forecast_demo.ipynb">aardvark-weather-public</a> repository. We adapt it to facilitate NCI users to run it on Gadi. We fixed several issues in <a href="https://github.com/anna-allen/aardvark-weather-public/blob/8fb35a0f5f7602eaf5127b9642c54eb052d68f56/aardvark/e2e_model.py#L161">the source code</a> to allow it running under torch 2.7.0.</p>
+<p>Here we load the trained Aardvark Weather model and produce a global and station forecast using the sample data.</p>
+<div id="2b67e840" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>module <span class="bu">list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Currently Loaded Modulefiles:
+ 1) openmpi/4.1.5   2) singularity   3) NCI-ai-ml/25.07   4) pbs  </code></pre>
+</div>
+</div>
+<div id="cf9dab00" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>wdir <span class="op">=</span> <span class="st">"/g/data/dk92/notebooks/examples-aiml/aardvark-weather/aardvark-weather-public"</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>ddir <span class="op">=</span> <span class="st">"/g/data/dk92/data/aardvark-weather"</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>sys.path.append(<span class="ss">f"</span><span class="sc">{</span>wdir<span class="sc">}</span><span class="ss">/aardvark"</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> e2e_model <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>matplotlib.rcParams[<span class="st">"mathtext.fontset"</span>] <span class="op">=</span> <span class="st">"stix"</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>matplotlib.rcParams[<span class="st">"font.family"</span>] <span class="op">=</span> <span class="st">"STIXGeneral"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Check a GPU is available</p>
+<div id="7ecbe5c6" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> torch.cuda.is_available():</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"GPU is available."</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"GPU name: </span><span class="sc">{</span>torch<span class="sc">.</span>cuda<span class="sc">.</span>get_device_name(<span class="dv">0</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    device<span class="op">=</span><span class="st">"cuda"</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"GPU is not available, cannot produce forecast."</span>)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    device<span class="op">=</span><span class="st">"cpu"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>GPU is available.
+GPU name: Tesla V100-PCIE-32GB</code></pre>
+</div>
+</div>
+<section id="generate-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="generate-predictions">Generate predictions</h2>
+<p>Load the sample data (for a detailed analysis and visualisation of the contents of this dataset see data_demo.ipynb)</p>
+<div id="a34ec5f8" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/sample_data_final.pkl"</span>, <span class="st">"rb"</span>) <span class="im">as</span> fp:</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> pickle.load(fp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Load the model to generate predictions at one day leadtime. First select which varaible to generate station forecasts for.</p>
+<div id="f163be3d" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>local_forecast_var <span class="op">=</span> <span class="st">"tas"</span>  <span class="co"># Model weights included for windspeed (ws) and 2tm (tas)</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ConvCNPWeatherE2E(</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    device<span class="op">=</span>device,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    lead_time<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    se_model_path<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/trained_model/encoder"</span>,</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    forecast_model_path<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/trained_model/processor"</span>,</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    sf_model_path<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/trained_model/decoder/</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">/"</span>,</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    return_gridded<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    aux_data_path<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/"</span>,</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Run the model to generate a forecast the sample data. This outputs the station forecast, gridded forevast and initial state</p>
+<div id="c4d0a657" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>station_forecast, global_forecast, initial_state <span class="op">=</span> model(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>after rMLP: torch.Size([1, 8719, 1])</code></pre>
+</div>
+</div>
+<div id="9595db37" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>global_forecast.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<pre><code>torch.Size([1, 121, 240, 24])</code></pre>
+</div>
+</div>
+<div id="8bf1855c" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>station_forecast.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<pre><code>torch.Size([1, 8719])</code></pre>
+</div>
+</div>
+</section>
+<section id="visualise-model-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="visualise-model-predictions">Visualise model predictions</h2>
+<p>First look at the gridded forecasts. Visualise several variables</p>
+<div id="db78623a" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">vars</span> <span class="op">=</span> [</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"u10"</span>,</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"v10"</span>,</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"t2m"</span>,</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"mslp"</span>,</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"z200"</span>,</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"z500"</span>,</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"z700"</span>,</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"z850"</span>,</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q200"</span>,</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q500"</span>,</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q700"</span>,</span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"q850"</span>,</span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"t200"</span>,</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"t500"</span>,</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"t700"</span>,</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"t850"</span>,</span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"u200"</span>,</span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"u500"</span>,</span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"u700"</span>,</span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"u850"</span>,</span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"v200"</span>,</span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"v500"</span>,</span>
+<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"v700"</span>,</span>
+<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"v850"</span>,</span>
+<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-28"><a href="#cb35-28" aria-hidden="true" tabindex="-1"></a>var_index_mapping <span class="op">=</span> {k: v <span class="cf">for</span> v, k <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">vars</span>)}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="ae2d6759" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>lon <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">359</span>, <span class="dv">240</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>lat <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">90</span>, <span class="dv">90</span>, <span class="dv">121</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Select the variable and data to plot. To plot another variable simply change the variable argument below.</p>
+<div id="577ed71f" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>variable <span class="op">=</span> <span class="st">"u10"</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>var_index <span class="op">=</span> var_index_mapping[variable]</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>initial_state_var <span class="op">=</span> initial_state[<span class="dv">0</span>, ..., var_index].detach().cpu().numpy()</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>global_forecast_var <span class="op">=</span> global_forecast[<span class="dv">0</span>, ..., var_index].detach().cpu().numpy()</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>colorscale_mag <span class="op">=</span> np.<span class="bu">max</span>(np.<span class="bu">abs</span>(initial_state_var))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Plot the initial state</p>
+<div id="420dc258" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.contourf(</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    lon,</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    lat,</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    initial_state_var,</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>    vmax<span class="op">=</span>colorscale_mag,</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>    vmin<span class="op">=-</span>colorscale_mag,</span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"RdBu_r"</span>,</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a><span class="co"># cbar.set_label('(m/s)')</span></span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"</span><span class="sc">{</span>variable<span class="sc">}</span><span class="ss"> initial state"</span>)</span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-29-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Plot the prediction at one day leadtime</p>
+<div id="f86a4932" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.contourf(</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    lon,</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    lat,</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>    global_forecast_var,</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>    levels<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>    vmax<span class="op">=</span>colorscale_mag,</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    vmin<span class="op">=-</span>colorscale_mag,</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"RdBu_r"</span>,</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="co"># cbar.set_label('(m/s)')</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"</span><span class="sc">{</span>variable<span class="sc">}</span><span class="ss"> forecast"</span>)</span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The model also returns the station forecasts for T2M</p>
+<div id="2b2a4779" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>STATION_LON_LAT_SF <span class="op">=</span> <span class="dv">360</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>HADISD_SCALING_FACTOR <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Factors to unnormalise predictions</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> np.load(<span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/norm_factors/mean_hadisd_</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">.npy"</span>)</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>std <span class="op">=</span> np.load(<span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/norm_factors/std_hadisd_</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">.npy"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="7fd44954" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>station_forecast <span class="op">=</span> (</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    station_forecast.detach().cpu() <span class="op">*</span> std <span class="op">+</span> mean</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>) <span class="op">*</span> HADISD_SCALING_FACTOR</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/jobfs/151106967.gadi-pbs/ipykernel_405486/3168040627.py:2: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+  station_forecast.detach().cpu() * std + mean</code></pre>
+</div>
+</div>
+<div id="0cbd26ec" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.scatter(</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"downscaling"</span>][<span class="st">"x_target"</span>][<span class="dv">0</span>, <span class="dv">0</span>, :].detach().cpu() <span class="op">*</span> STATION_LON_LAT_SF,</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"downscaling"</span>][<span class="st">"x_target"</span>][<span class="dv">0</span>, <span class="dv">1</span>, :].detach().cpu() <span class="op">*</span> STATION_LON_LAT_SF,</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    c<span class="op">=</span>station_forecast[<span class="dv">0</span>, :],</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>    vmax<span class="op">=</span><span class="dv">30</span>,</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>    vmin<span class="op">=-</span><span class="dv">30</span>,</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"RdBu_r"</span>,</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">"(C)"</span>)</span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-33-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="end-to-end-optimised-forecast-demo" class="level1">
+<h1>End to end optimised forecast demo</h1>
+<p><strong>Notes from NCI</strong>: This notebook is originally from <a href="https://github.com/anna-allen/aardvark-weather-public/blob/main/notebooks/e2e_finetune_demo.ipynb">aardvark-weather-public</a> repository. We adapt it to facilitate NCI users to run it on Gadi. We fixed several issues in <a href="https://github.com/anna-allen/aardvark-weather-public/blob/8fb35a0f5f7602eaf5127b9642c54eb052d68f56/aardvark/e2e_model.py#L161">the source code</a> to allow it running under torch 2.7.0. We also want to point out that it is not the purpose of this notebook to demonstrate how to finetune this end-to-end model. Instead, it shows how to use the fine-tuned end-to-end model to predict.</p>
+<p>Here we load the trained Aardvark Weather model and produce end-to-end finetuned forecasts at one day lead time for temperature and windspeed.</p>
+<div id="7dd003c6" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>module <span class="bu">list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Currently Loaded Modulefiles:
+ 1) openmpi/4.1.5   2) singularity   3) NCI-ai-ml/25.07   4) pbs  </code></pre>
+</div>
+</div>
+<div id="4471564b" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>wdir <span class="op">=</span> <span class="st">"/g/data/dk92/notebooks/examples-aiml/aardvark-weather/aardvark-weather-public"</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>ddir <span class="op">=</span> <span class="st">"/g/data/dk92/data/aardvark-weather"</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>sys.path.append(<span class="ss">f"</span><span class="sc">{</span>wdir<span class="sc">}</span><span class="ss">/aardvark"</span>)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> e2e_model <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>matplotlib.rcParams[<span class="st">'mathtext.fontset'</span>] <span class="op">=</span> <span class="st">'stix'</span></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>matplotlib.rcParams[<span class="st">'font.family'</span>] <span class="op">=</span> <span class="st">'STIXGeneral'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Check a GPU is available</p>
+<div id="18044649" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> torch.cuda.is_available():</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"GPU is available."</span>)</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"GPU name: </span><span class="sc">{</span>torch<span class="sc">.</span>cuda<span class="sc">.</span>get_device_name(<span class="dv">0</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"GPU is not available, cannot produce forecast."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>GPU is available.
+GPU name: Tesla V100-PCIE-32GB</code></pre>
+</div>
+</div>
+<section id="generate-predictions-1" class="level2">
+<h2 class="anchored" data-anchor-id="generate-predictions-1">Generate predictions</h2>
+<p>Load the sample data (for a detailed analysis and visualisation of the contents of this dataset see data_demo.ipynb)</p>
+<div id="7041169b" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="ss">f'</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/sample_data_final.pkl'</span>, <span class="st">'rb'</span>) <span class="im">as</span> fp:</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> pickle.load(fp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Load the end to end model. First select which varaible to generate station forecasts for.</p>
+<div id="4d24abf1" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>local_forecast_var <span class="op">=</span> <span class="st">"tas"</span> <span class="co"># Model weights included for windspeed (ws) and 2tm (tas)</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ConvCNPWeatherE2E(</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>    device<span class="op">=</span><span class="st">"cuda"</span>,</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>    lead_time<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>    se_model_path<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/trained_model/encoder"</span>,</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>    forecast_model_path<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/trained_model/processor"</span>,</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>    sf_model_path<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/trained_model/decoder/</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">/"</span>,</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>    return_gridded<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>    aux_data_path<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/"</span>,</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Load the trained weights</p>
+<div id="358f7684" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>weights_path <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/trained_model/e2e_finetuned/</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">/"</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>best_epoch <span class="op">=</span> np.argmin(np.load(weights_path<span class="op">+</span><span class="st">"losses_0.npy"</span>))</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>state_dict <span class="op">=</span> torch.load(</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>weights_path<span class="sc">}</span><span class="ss">/epoch_</span><span class="sc">{</span>best_epoch<span class="sc">}</span><span class="ss">"</span>, map_location<span class="op">=</span><span class="st">"cuda"</span>,weights_only<span class="op">=</span><span class="va">False</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>)[<span class="st">"model_state_dict"</span>]</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>state_dict <span class="op">=</span> {k[<span class="dv">7</span>:]: v <span class="cf">for</span> k, v <span class="kw">in</span> <span class="bu">zip</span>(state_dict.keys(), state_dict.values())}</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>model.load_state_dict(state_dict)</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> model.to(<span class="st">"cuda"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="bcb75751" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co">#station_forecast = model(data)</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>station_forecast, global_forecast, initial_state <span class="op">=</span> model(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>after rMLP: torch.Size([1, 8719, 1])</code></pre>
+</div>
+</div>
+</section>
+<section id="visualise-model-predictions-1" class="level2">
+<h2 class="anchored" data-anchor-id="visualise-model-predictions-1">Visualise model predictions</h2>
+<p>Plot the station forecasts</p>
+<div id="424cfe91" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>STATION_LON_LAT_SF <span class="op">=</span> <span class="dv">360</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>HADISD_SCALING_FACTOR <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Factors to unnormalise predictions</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> np.load(<span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/norm_factors/mean_hadisd_</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">.npy"</span>)</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>std <span class="op">=</span> np.load(<span class="ss">f"</span><span class="sc">{</span>ddir<span class="sc">}</span><span class="ss">/sample_data/norm_factors/std_hadisd_</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">.npy"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="732b759b" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>station_forecast_unnorm <span class="op">=</span> (</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>    station_forecast.detach().cpu() <span class="op">*</span> std <span class="op">+</span> mean</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>) <span class="op">*</span> HADISD_SCALING_FACTOR</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/jobfs/151106967.gadi-pbs/ipykernel_405681/444701172.py:2: DeprecationWarning: __array_wrap__ must accept context and return_scalar arguments (positionally) in the future. (Deprecated NumPy 2.0)
+  station_forecast.detach().cpu() * std + mean</code></pre>
+</div>
+</div>
+<div id="d45cdfc2" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>plot_channel <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> plt.scatter(</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"downscaling"</span>][<span class="st">"x_target"</span>][<span class="dv">0</span>, <span class="dv">0</span>, :].detach().cpu() <span class="op">*</span> STATION_LON_LAT_SF,</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"downscaling"</span>][<span class="st">"x_target"</span>][<span class="dv">0</span>, <span class="dv">1</span>, :].detach().cpu() <span class="op">*</span> STATION_LON_LAT_SF,</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>    c<span class="op">=</span>station_forecast_unnorm[<span class="dv">0</span>, :],</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>    vmax<span class="op">=</span><span class="dv">30</span>,</span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>    vmin<span class="op">=-</span><span class="dv">30</span>,</span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"RdBu_r"</span>,</span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(p)</span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">"(C)"</span>)</span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Longitude"</span>)</span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Latitude"</span>)</span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"</span><span class="sc">{</span>local_forecast_var<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aardvark_files/figure-html/cell-43-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="train-the-data-assimilation-block" class="level1">
+<h1>Train the Data Assimilation Block</h1>
+<p>This notebook is largely an adaption from the <a href="https://github.com/anna-allen/aardvark-weather-public/blob/main/aardvark/train_module.py">script</a> used for training different blocks in the aardvark-weather model. We tailored it to specificly train the data assimilation block using the data in the year of 2007 from the <strong>training data</strong> released by the author in the <a href="https://huggingface.co/datasets/av555/aardvark-weather/tree/main/training_data">huggingface instance av555/aardvark-weather</a></p>
+<p>Please note, this is only a demonstration of the protocal used in training the <strong>data assimilation block</strong> of the aardvark-weather model.</p>
+<p>In order to run this notebook, please rewrite the <strong>training data</strong> in the mmap format required by <a href="https://github.com/anna-allen/aardvark-weather-public/blob/main/aardvark/loader.py">the original dataloader</a> and pass the path to the <code>WeatherDatasetAssimilation</code> class to replace <code>aardvark/datasets/</code>. If you need help to generate the mmap files, please get in touch.</p>
+<div id="d8bb1151" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>module <span class="bu">list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Currently Loaded Modulefiles:
+ 1) openmpi/4.1.5   2) singularity   3) NCI-ai-ml/25.07   4) pbs  </code></pre>
+</div>
+</div>
+<div id="d0743275" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os, sys</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co">#from torch.utils.data.distributed import DistributedSampler</span></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.utils.data <span class="im">import</span> DataLoader</span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>wdir<span class="op">=</span><span class="st">"/g/data/dk92/notebooks/examples-aiml/aardvark-weather/aardvark-weather-public/aardvark"</span></span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>sys.path.append(wdir)</span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> loader <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> models <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> loss_functions <span class="im">import</span> WeightedRmseLoss</span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>device<span class="op">=</span>torch.device(<span class="st">'cuda:0'</span> <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">'cpu'</span>)</span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> torch.cuda.is_available():</span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a>    torch.cuda.set_device(<span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="a2db708d" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set up dataset</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>train_dataset <span class="op">=</span> WeatherDatasetAssimilation(</span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>            device<span class="op">=</span>device,</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>            dpath<span class="op">=</span><span class="st">"/g/data/z00/yxs900/aardvark/datasets/"</span>,</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>            hadisd_mode<span class="op">=</span><span class="st">"train"</span>,</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>            start_date<span class="op">=</span><span class="st">"2007-01-02"</span>,</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>            end_date<span class="op">=</span><span class="st">"2007-12-31"</span>,</span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a>            lead_time<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>            era5_mode<span class="op">=</span><span class="st">"4u"</span>,</span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a>            res<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a>            var_start<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a>            var_end<span class="op">=</span><span class="dv">24</span>,</span>
+<span id="cb61-13"><a href="#cb61-13" aria-hidden="true" tabindex="-1"></a>            diff<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb61-14"><a href="#cb61-14" aria-hidden="true" tabindex="-1"></a>            two_frames<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb61-15"><a href="#cb61-15" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb61-16"><a href="#cb61-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-17"><a href="#cb61-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(train_dataset))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Loading IGRA
+Loading AMSU-A
+Loading AMSU-B
+Loading ICOADS
+Loading IASI
+Loading GEO
+Loading HADISD
+Loading ASCAT
+Loading ERA5
+1451</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/opt/conda/envs/mlenv/lib/python3.10/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /home/conda/feedstock_root/build_artifacts/libtorch_1746251337391/work/aten/src/ATen/native/TensorShape.cpp:4314.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]</code></pre>
+</div>
+</div>
+<div id="ff5af5de" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>train_dataset.era5_sfc[<span class="dv">0</span>].shape, train_dataset.start_date</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<pre><code>((1460, 24, 240, 121), '2007-01-02')</code></pre>
+</div>
+</div>
+<div id="b3f942f2" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dive into the data structure used in the training sample.</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>task <span class="op">=</span> train_dataset[<span class="dv">0</span>]</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> task.keys():</span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> task[k]</span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>v<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">"_x_"</span> <span class="kw">in</span> k:</span>
+<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">: lat=</span><span class="sc">{</span>v[<span class="dv">1</span>]<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">, lon=</span><span class="sc">{</span>v[<span class="dv">0</span>]<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb66-10"><a href="#cb66-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> <span class="st">"hadisd"</span> <span class="kw">in</span> k:</span>
+<span id="cb66-11"><a href="#cb66-11" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">: ch1=</span><span class="sc">{</span>v[<span class="dv">0</span>]<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">, ch2=</span><span class="sc">{</span>v[<span class="dv">1</span>]<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">, ch3=</span><span class="sc">{</span>v[<span class="dv">2</span>]<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">, ch4=</span><span class="sc">{</span>v[<span class="dv">3</span>]<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">, ch5=</span><span class="sc">{</span>v[<span class="dv">4</span>]<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x_context_hadisd_current: ch1=torch.Size([2, 9549]), ch2=torch.Size([2, 9447]), ch3=torch.Size([2, 8846]), ch4=torch.Size([2, 9551]), ch5=torch.Size([2, 9551])
+y_context_hadisd_current: ch1=torch.Size([9549]), ch2=torch.Size([9447]), ch3=torch.Size([8846]), ch4=torch.Size([9551]), ch5=torch.Size([9551])
+climatology_current: torch.Size([24, 240, 121])
+sat_x_current: lat=torch.Size([200]), lon=torch.Size([514])
+sat_current: torch.Size([2, 514, 200])
+icoads_x_current: lat=torch.Size([12000]), lon=torch.Size([12000])
+icoads_current: torch.Size([5, 12000])
+igra_x_current: lat=torch.Size([1375]), lon=torch.Size([1375])
+igra_current: torch.Size([24, 1375])
+amsua_current: torch.Size([180, 360, 13])
+amsua_x_current: lat=torch.Size([180]), lon=torch.Size([360])
+amsub_current: torch.Size([360, 180, 12])
+amsub_x_current: lat=torch.Size([180]), lon=torch.Size([360])
+iasi_current: torch.Size([360, 181, 52])
+iasi_x_current: lat=torch.Size([181]), lon=torch.Size([360])
+ascat_current: torch.Size([360, 181, 17])
+ascat_x_current: lat=torch.Size([181]), lon=torch.Size([360])
+hirs_current: torch.Size([360, 180, 26])
+hirs_x_current: lat=torch.Size([180]), lon=torch.Size([360])
+y_target_current: torch.Size([121, 240, 24])
+era5_x_current: lat=torch.Size([121]), lon=torch.Size([240])
+era5_elev_current: torch.Size([7, 121, 240])
+era5_lonlat_current: torch.Size([2, 240, 121])
+aux_time_current: torch.Size([5])
+lt: torch.Size([1])
+y_target: torch.Size([121, 240, 24])</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/g/data/dk92/notebooks/examples-aiml/aardvark-weather/aardvark-weather-public/aardvark/loader.py:488: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /home/conda/feedstock_root/build_artifacts/libtorch_1746251337391/work/torch/csrc/utils/tensor_numpy.cpp:203.)
+  return torch.from_numpy(arr).float().to(self.device)</code></pre>
+</div>
+</div>
+<div id="7fdbeee2" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set up dataloader</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>train_loader <span class="op">=</span> DataLoader(</span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>        train_dataset,</span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a>        batch_size<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>        shuffle<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(train_loader))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1451</code></pre>
+</div>
+</div>
+<div id="4298ab69" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co"># init model</span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ConvCNPWeather(</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>            in_channels<span class="op">=</span><span class="dv">277</span>,</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>            out_channels<span class="op">=</span><span class="dv">24</span>,</span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>            int_channels<span class="op">=</span><span class="dv">24</span>,</span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>            device<span class="op">=</span>device,</span>
+<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a>            res<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a>            gnp<span class="op">=</span><span class="bu">bool</span>(<span class="dv">0</span>),</span>
+<span id="cb71-9"><a href="#cb71-9" aria-hidden="true" tabindex="-1"></a>            decoder<span class="op">=</span><span class="st">"vit_assimilation"</span>,</span>
+<span id="cb71-10"><a href="#cb71-10" aria-hidden="true" tabindex="-1"></a>            mode<span class="op">=</span><span class="st">"assimilation"</span>,</span>
+<span id="cb71-11"><a href="#cb71-11" aria-hidden="true" tabindex="-1"></a>            film<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb71-12"><a href="#cb71-12" aria-hidden="true" tabindex="-1"></a>            two_frames<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb71-13"><a href="#cb71-13" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb71-14"><a href="#cb71-14" aria-hidden="true" tabindex="-1"></a>model.decoder_lr <span class="op">=</span> model.decoder_lr.to(device)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="6e8ccbf9" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loss function</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>lf <span class="op">=</span> WeightedRmseLoss(<span class="dv">1</span>,start_ind<span class="op">=</span><span class="dv">0</span>,end_ind<span class="op">=</span><span class="dv">24</span>,weight_per_variable<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>lr<span class="op">=</span><span class="fl">5e-4</span></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>wd<span class="op">=</span><span class="fl">1e-6</span></span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> torch.optim.Adam(model.parameters(), lr<span class="op">=</span>lr, weight_decay<span class="op">=</span>wd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="e0cd9db2" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># training loop</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>n_epochs<span class="op">=</span><span class="dv">3</span></span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(n_epochs):</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>    acc_loss<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>    model.train()</span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>    prev_step <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ii, task <span class="kw">in</span> <span class="bu">enumerate</span>(train_loader):</span>
+<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> model(task,film_index<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb73-9"><a href="#cb73-9" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> lf(task[<span class="st">"y_target"</span>],out,prev_step,fix_sigma<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb73-10"><a href="#cb73-10" aria-hidden="true" tabindex="-1"></a>        loss.backward()</span>
+<span id="cb73-11"><a href="#cb73-11" aria-hidden="true" tabindex="-1"></a>        prev_step <span class="op">=</span> out</span>
+<span id="cb73-12"><a href="#cb73-12" aria-hidden="true" tabindex="-1"></a>        opt.step()</span>
+<span id="cb73-13"><a href="#cb73-13" aria-hidden="true" tabindex="-1"></a>        opt.zero_grad()</span>
+<span id="cb73-14"><a href="#cb73-14" aria-hidden="true" tabindex="-1"></a>        acc_loss <span class="op">+=</span> loss.item()</span>
+<span id="cb73-15"><a href="#cb73-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">#print(f"epoch {epoch} step {ii}: loss={loss}")</span></span>
+<span id="cb73-16"><a href="#cb73-16" aria-hidden="true" tabindex="-1"></a>        <span class="co">#if ii&gt;= 8:</span></span>
+<span id="cb73-17"><a href="#cb73-17" aria-hidden="true" tabindex="-1"></a>        <span class="co">#    break</span></span>
+<span id="cb73-18"><a href="#cb73-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"epoch </span><span class="sc">{</span>epoch<span class="sc">}</span><span class="ss">: average training loss=</span><span class="sc">{</span>acc_loss<span class="op">/</span><span class="bu">len</span>(train_loader)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>epoch 0: average training loss=0.07086729208491409
+epoch 1: average training loss=0.058982408160714754
+epoch 2: average training loss=0.05863337186925745</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/NCI900-Training-Organisation\.github\.io\/learning-resources\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/NCI900-Training-Organisation/learning-resources.git/blob/main/Example-Notebooks/aardvark.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/blob/main/Example-Notebooks/aardvark.ipynb" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

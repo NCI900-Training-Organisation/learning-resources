@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>filetransfer – Learning Hub</title>
+<title>filetransfer – Training Resources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -85,41 +120,10 @@ ul.task-list li input[type="checkbox"] {
     <img src="../img/NCI logo White small.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Learning Hub</span>
+    <span class="navbar-title">Training Resources</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../courses.html"> 
-<span class="menu-text">Courses</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../tutorials.html"> 
-<span class="menu-text">Tutorials</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">More</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-more">    
-        <li>
-    <a class="dropdown-item" href="../about.html">
- <span class="dropdown-text">About</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+        <div class="quarto-navbar-tools tools-end">
     <a href="https://github.com/orgs/NCI900-Training-Organisation/repositories" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
@@ -127,6 +131,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </a>
 </div>
+          <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
@@ -134,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/accounts.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/filetransfer.html">File Transfer</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Getting-Started/accounts.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../Getting-Started/filetransfer.html">File Transfer</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,26 +165,14 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../courses.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Self-paced Courses</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tutorials</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Dlweather</span></a>
+ <span class="menu-text">Example Notebooks</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -187,26 +180,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dlweather/1_data_inspection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lucie - Data Inspection</span></a>
+  <a href="../Example-Notebooks/aardvark.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Climate Weather AI/ML Model - Aardvark Weather</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dlweather/2_replicate_training.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lucie - Replicate Training</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dlweather/3_modified_training.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lucie - Modified Training</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../dlweather/4_inference_10y_rollout.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lucie - Inference</span></a>
+  <a href="../Example-Notebooks/lucie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Climate Weather AI/ML Model - Lucie</span></a>
   </div>
 </li>
       </ul>
@@ -214,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Tutorials</span></a>
+ <span class="menu-text">Getting Started</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -222,26 +203,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/accounts.html" class="sidebar-item-text sidebar-link">
+  <a href="../Getting-Started/accounts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Accounts</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/filetransfer.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Getting-Started/filetransfer.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">File Transfer</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/logingadi.html" class="sidebar-item-text sidebar-link">
+  <a href="../Getting-Started/logingadi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Login to Gadi</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/use-jupyterlab.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Use JupyterLab on Gadi</span></a>
+  <a href="../Getting-Started/use-jupyterlab.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run Jupyter Notebooks on Gadi</span></a>
   </div>
 </li>
       </ul>
@@ -257,14 +238,18 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#file-transfer" id="toc-file-transfer" class="nav-link active" data-scroll-target="#file-transfer">File Transfer</a></li>
-  <li><a href="#scp" id="toc-scp" class="nav-link" data-scroll-target="#scp">SCP</a></li>
+  <li><a href="#scp" id="toc-scp" class="nav-link" data-scroll-target="#scp">SCP</a>
+  <ul class="collapse">
+  <li><a href="#from-local-system-gadi" id="toc-from-local-system-gadi" class="nav-link" data-scroll-target="#from-local-system-gadi">From local system → Gadi</a></li>
+  <li><a href="#from-gadi-local-system" id="toc-from-gadi-local-system" class="nav-link" data-scroll-target="#from-gadi-local-system">From Gadi → local system</a></li>
+  </ul></li>
   <li><a href="#rsync" id="toc-rsync" class="nav-link" data-scroll-target="#rsync">rsync</a></li>
   <li><a href="#large-transfers-over-500-gib" id="toc-large-transfers-over-500-gib" class="nav-link" data-scroll-target="#large-transfers-over-500-gib">Large transfers over 500 GiB</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/edit/main/tutorials/filetransfer.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/blob/main/tutorials/filetransfer.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/edit/main/Getting-Started/filetransfer.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/blob/main/Getting-Started/filetransfer.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/accounts.html">Tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/filetransfer.html">File Transfer</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Getting-Started/accounts.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../Getting-Started/filetransfer.html">File Transfer</a></li></ol></nav></header>
 
 
 
@@ -288,12 +273,12 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Mac and Linux</td>
-<td>rsync</td>
+<td><code>rsync</code></td>
 <td>A powerful tool for transferring large files, with the ability to compare source and destination and only send changes.</td>
 </tr>
 <tr class="even">
 <td>Mac and Linux</td>
-<td>scp</td>
+<td><code>scp</code></td>
 <td>A simple file transfer tool (secure copy).</td>
 </tr>
 <tr class="odd">
@@ -303,40 +288,46 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+<blockquote class="blockquote">
 <p>Note: Transferring Code<br>
-The best way to transfer code from one computer to another is to host the code in a source code repository using a versioning system such as git and clone the repository to the supercomputer. Recommended learning: <a href="https://swcarpentry.github.io/git-novice/">Version Control with Git</a></p>
+The best way to transfer code from one computer to another is to host the code in a source code repository using a &gt; versioning system such as git and clone the repository to the supercomputer. Recommended learning: <a href="https://swcarpentry.github.io/git-novice/">Version Control with Git</a></p>
+</blockquote>
 </section>
 <section id="scp" class="level1">
 <h1>SCP</h1>
-<p>From local system → Gadi</p>
+<section id="from-local-system-gadi" class="level2">
+<h2 class="anchored" data-anchor-id="from-local-system-gadi">From local system → Gadi</h2>
 <p>To start a scp transfer through Gadi’s data-mover nodes, you can run the command,</p>
-<pre><code>$ scp &lt;source&gt; &lt;destination&gt;</code></pre>
-<p>Notice that the domain is gadi-dm.nci.org.au, as you are logging into a data-mover node instead of a login node.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>source<span class="op">&gt;</span> <span class="op">&lt;</span>destination<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Notice that the domain is <code>gadi-dm.nci.org.au</code>, as you are logging into a data-mover node instead of a login node.</p>
 <p>Replace the filename with the file you wish to transfer, including the file extension e.g.&nbsp;.sh, .pdf, and use your username as the login. The destination should be replaced with location that you want the file to be placed in, like the following for an example:</p>
-<pre><code>$ scp testfile.sh &lt;user&gt;@gadi-dm.nci.org.au:/scratch/&lt;project dir&gt;/&lt;somewhere&gt;/</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp testfile.sh <span class="op">&lt;</span>user<span class="op">&gt;</span>@gadi-dm.nci.org.au:/scratch/<span class="op">&lt;</span>project dir<span class="op">&gt;</span>/<span class="op">&lt;</span>somewhere<span class="op">&gt;</span>/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You will then be prompted for your password, once entered, your file transfer will begin.</p>
-<p>From Gadi → local system</p>
+</section>
+<section id="from-gadi-local-system" class="level2">
+<h2 class="anchored" data-anchor-id="from-gadi-local-system">From Gadi → local system</h2>
 <p>If you want to do the opposite, move a file from Gadi to your local system, you simply need to reverse the prompt to reflect this, like so</p>
-<pre><code>$ scp &lt;user&gt;@gadi-dm.nci.org.au:/scratch/&lt;project dir&gt;/&lt;somewhere&gt;/ ./</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> scp <span class="op">&lt;</span>user<span class="op">&gt;</span>@gadi-dm.nci.org.au:/scratch/<span class="op">&lt;</span>project dir<span class="op">&gt;</span>/<span class="op">&lt;</span>somewhere<span class="op">&gt;</span>/ ./</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To find a listing of all the options available to you with scp, e.g.&nbsp;which option to use to transfer a folder/directory, use the command</p>
-<pre><code>$ man scp</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> man scp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 </section>
 <section id="rsync" class="level1">
 <h1>rsync</h1>
 <p>If you are transferring a larger file and want to add a layer of protection to the transfer, using rsync will give you the ability to resume a transfer that has been interrupted. As with SCP, reversing your pathways will change which direction the transfer is happening, either uploading from your local device or downloading from Gadi.</p>
 <p>rsync also allows greater control over the transfer and exactly what happens with the file by placing options into the command line, such as</p>
-<pre><code>$ rsync -vP  testfile.sh &lt;user&gt;@gadi-dm.nci.org.au:/home/900/&lt;user&gt;</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rsync <span class="at">-vP</span>  testfile.sh <span class="op">&lt;</span>user<span class="op">&gt;</span>@gadi-dm.nci.org.au:/home/900/<span class="op">&lt;</span>user<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>the <code>-vP</code> in the command line means that the output file will be verbose and preserve all of its attributes such as timestamps. -P is a great way to get an exact copy of your file.</p>
 <p>To find a listing of all the options available to you with rsync, e.g.&nbsp;which option to use to transfer a folder/directory, use the command</p>
-<pre><code>$ man rsync</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> man rsync</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>to print a list of all of the variables that you can use.</p>
-<pre><code>-a, --archive    archive mode; equals -rlptgoD (no -H,-A,-X)
--v, --verbose               increase verbosity
--P                          same as --partial --progress
--x, --one-file-system       don't cross filesystem boundaries
--H, --hard-links            preserve hard links
--g, --group                 preserve group
---chmod=CHMOD           affect file and/or directory permissions</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">-a,</span> <span class="at">--archive</span>    archive mode<span class="kw">;</span> <span class="ex">equals</span> <span class="at">-rlptgoD</span> <span class="er">(</span><span class="ex">no</span> <span class="at">-H,-A,-X</span><span class="kw">)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">-v,</span> <span class="at">--verbose</span>               increase verbosity</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-P</span>                          same as <span class="at">--partial</span> <span class="at">--progress</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-x,</span> <span class="at">--one-file-system</span>       don<span class="st">'t cross filesystem boundaries</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="st">-H, --hard-links            preserve hard links</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">-g, --group                 preserve group</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">--chmod=CHMOD           affect file and/or directory permissions</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If something happens and your transfer doesn’t complete, simply run the exact command again and the transfer will pick up where it left off.</p>
 </section>
 <section id="large-transfers-over-500-gib" class="level1">
@@ -752,4 +743,4 @@ The best way to transfer code from one computer to another is to host the code i
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/edit/main/tutorials/filetransfer.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/blob/main/tutorials/filetransfer.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/edit/main/Getting-Started/filetransfer.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/blob/main/Getting-Started/filetransfer.md" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/NCI900-Training-Organisation/learning-resources.git/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
