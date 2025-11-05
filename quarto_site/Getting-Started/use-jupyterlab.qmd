@@ -1,12 +1,13 @@
 ---
-title: "Use JupyterLab on Gadi"
+title: "Run Jupyter Notebooks on Gadi"
 ---
+ARE (Australian Research Environment) gives you access to NCI’s Gadi supercomputer and data collections, all from a simple, graphical interface. ARE consists of a number of applications that support your research such as Virtual Desktop, JupyterLab, Terminal, etc.   
 
-# Before the Day - Cluster Access
-
+# Cluster Access
 1. [Create an NCI account ](https://my.nci.org.au/mancini)using **institution email**
-2. Join below NCI projects
+2. Join necessary NCI projects for resources allocation (e.g. compute, dataset, software modules, etc.)
     - [vp91:NCI Training Project](https://aus01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmy.nci.org.au%2Fmancini%2Fproject%2Fvp91&data=05%7C02%7CZhuochen.Wu%40anu.edu.au%7Cf5a89cc20ce54084a5a408dda23d8170%7Ce37d725cab5c46249ae5f0533e486437%7C0%7C0%7C638845107242745767%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=U5QIrogOxO%2FbxR8Y7FGaB8tA1hzCGOzqP4QiFiqv5XU%3D&reserved=0)
+    - other projects may be needed depending on the notebook you are running
 # Launch JupyterLab Session on ARE
 
 ## Login to ARE
@@ -22,42 +23,40 @@ Click on the **JupyterLab** tile from the Dashboard, this will open the setting 
 ![Click JupyterLab tile](img/ARE_click_jupyter.png)
  
 ## Basic Settings
-Setting form has free text input boxes. So we can **copy the exact text values** below and paste over to the form. 
+Depending on the notebook you are running, you may need to adjust the settings. If you are attending a workshop, you should use the settings specified in the workshop.
+Setting form has free text input boxes. So we can **copy the example values** below and paste over to the form. 
 
 
-**Walltime (hours)**
-3
+> **Example settings:**  
+> 
+> - **Walltime (hours):** `3`  
+> - **Queue:** `normal`  
+> - **Compute Size:** `small`  
+> - **Project:** `vp91`  
+> - **Storage:** `gdata/vp91+scratch/vp91`
 
-**Queue**
-normal
-
-**Compute Size**
-small
-
-**Project**
-vp91
-
-**Storage**
-gdata/vp91+scratch/vp91
-
-![Setting page for JupyterLab session](img/ARE_settings.png)  
+<img src="img/ARE_settings.png" alt="Setting page for JupyterLab session" style="width:70%; display:block; margin-left:auto; margin-right:auto;" />
 Input boxes can also be used as dropdown selection. If you need to use different NCI projects when working on your project you might find the dropdown function helpful.
  
 ## Advanced Settings
 
 Click on  **Show advanced settings** at the end of page. This will expand the form with extra fields. 
-![Show advanced settings checkbox](img/ARE_show_adv_settings.png)
+<img src="img/ARE_show_adv_settings.png" alt="Show advanced settings checkbox" style="width:70%; display:block; margin-left:auto; margin-right:auto;" />
 We will fill in selected fields with these values: 
 Some field names are similar, check the **field names** you are editing are correct. 
 
-**Modules**
-python3/3.11.0 cuda/12.8.0
+> **Example advanced settings:**
+>  
+> Fill in the following fields in the Advanced Settings section:
+>
+> - **Modules**:  
+>   `python3/3.11.0 cuda/12.8.0`
+>
+> - **Python or Conda virtual environment base**:  
+>   `/scratch/data/vp91/Training-Venvs/intro-to-dask`
 
-**Python or Conda virtual environment base**
-/scratch/data/vp91/Training-Venvs/intro-to-dask
 
-
-![Advanced settings section](img/ARE_adv_settings.png)
+<img src="img/ARE_adv_settings.png" alt="Advanced settings section" style="width:70%; display:block; margin-left:auto; margin-right:auto;" />
 
 
 ## Launch Session

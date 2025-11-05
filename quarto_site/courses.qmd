@@ -12,10 +12,8 @@ E-research community and NCI training courses are available here.
 # Deep Learning
 [Introduction to Neural Networks and PyTorch](https://intro-to-pytorch.readthedocs.io/en/latest/)  
 [Deep Learning Model Development in Weather and Climate Studies](https://opus.nci.org.au/x/CIA8Gw)  
-* [Lucie - Data Inspection Notebook](dlweather/1_data_inspection.ipynb)  
-* [Lucie - Replicate Training Notebook](dlweather/2_replicate_training.ipynb)  
-* [Lucie - Modified Training Notebook](dlweather/3_modified_training.ipynb)  
-* [Lucie - Inference Notebook](dlweather/4_inference_10y_rollout.ipynb)   
+* [Lucie Notebook](Example-Notebooks/lucie.ipynb)  
+
 
 # High Performance Computing
 [Hands-on with Gadi](https://handson-with-gadi.readthedocs.io/en/latest/)  
